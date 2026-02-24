@@ -1,0 +1,9 @@
+.env
+*.pyc
+__pycache__/
+venv/
+output/
+*.pdf
+credentials.json
+oauth_credentials.json
+token.json

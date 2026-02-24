@@ -1,0 +1,25 @@
+{
+  "description": "Meeting2Deck MCP server configuration reference",
+  "servers": {
+    "google-slides": {
+      "type": "custom",
+      "transport": "stdio",
+      "command": "python3 services/slides_mcp_server.py",
+      "tools": [
+        "create_presentation",
+        "add_slide",
+        "build_deck_from_json",
+        "get_presentation_url"
+      ]
+    },
+    "notion": {
+      "type": "pre-installed",
+      "note": "Uses globally configured Notion MCP",
+      "tools": [
+        "API-post-page",
+        "API-patch-block-children",
+        "API-retrieve-a-database"
+      ]
+    }
+  }
+}
